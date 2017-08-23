@@ -3,7 +3,9 @@ NB. edith demo
 coclass 'qtdemo'
 
 Text=: 0 : 0
-<p>The <b><i>King and Queen of Hearts</i></b> were seated on their throne when
+<p>
+<img src="image/king.jpg" width="200" height="289" align="right" />
+The <b><i>King and Queen of Hearts</i></b> were seated on their throne when
 they arrived, with a great crowd assembled about them -- all
 sorts of little birds and beasts, as well as the whole pack of
 cards: the Knave was standing before them, in chains, with a
@@ -109,6 +111,7 @@ if. UNAME -: 'Linux' do. fnt=: 'font: 12pt "DejaVu Serif"' else. fnt=: 'font: 12
 if. UNAME -: 'Linux' do. fnte=: 'font: 12pt "DejaVu Mono"' else. fnte=: 'font: 12pt "Courier New";' end.
 wd 'set ted stylesheet *QTextEdit {color:#00007f;background-color:#ffffee;',fnt,'}'
 wd 'set ted text *',Text
+wd ::0: 'set ted baseurl *',jpath'~addons/demos/qtdemo/'
 wd 'pmove 100 10 700 500'
 wd 'pshow'
 NB. call these after the pshow:

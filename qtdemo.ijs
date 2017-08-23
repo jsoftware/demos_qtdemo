@@ -27,6 +27,7 @@ if. IFWIN *: IF64 do. 0 return. end.
 )
 
 TITLES=: maketitle 0 : 0
+browser dbrowser
 controls dcontrols
 datetime ddatetime
 dial ddial
@@ -120,6 +121,7 @@ qtdemo_enter=: qtdemo_ok_button=: qtdemo_listbox_button
 qtdemo_cancel_button=: qtdemo_close
 
 NB. =========================================================
+dbrowser=: 'browser' rundemo
 dcontrols=: 'controls' rundemo
 ddatetime=: 'datetime' rundemo
 ddial=: 'dial' rundemo
