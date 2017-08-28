@@ -98,6 +98,7 @@ menupop "&File";
 menu open "&Open" "Ctrl+O" "" "";
 menu edit "&Edit" "Ctrl+E" "" "";
 menu print "&Print" "Ctrl+P" "" "";
+menu preview "Preview" "" "" "";
 menusep;
 menu quit "&Quit" "Ctrl+Q" "" "";
 menupopz;
@@ -154,6 +155,10 @@ end.
 
 edithdemo_print_button=: 3 : 0
 wd'cmd ted print'
+)
+
+edithdemo_preview_button=: 3 : 0
+wd'cmd ted printpreview'
 )
 
 NB. =========================================================
