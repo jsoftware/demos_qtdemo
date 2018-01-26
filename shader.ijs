@@ -166,6 +166,8 @@ STOP=: -.STOP
 a_cancel=: a_close
 
 a_close=: 3 : 0
+STOP=: 0
+wd 'ptimer 0'
 glDeleteBuffers ::0: 2; vbo
 glDeleteProgram ::0: sprog
 wd 'pclose'

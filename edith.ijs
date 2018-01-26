@@ -116,7 +116,7 @@ wd ::0: 'set ted baseurl *',jpath'~addons/demos/qtdemo/'
 wd 'pmove 100 10 700 500'
 wd 'pshow'
 NB. call these after the pshow:
-wd 'set ted select 1580 1763'
+wd 'set ted select 1582 1764'
 wd 'set ted scroll 15'
 )
 

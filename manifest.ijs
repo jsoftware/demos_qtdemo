@@ -6,9 +6,9 @@ DESCRIPTION=: 0 : 0
 simple demos for qt
 )
 
-VERSION=: '1.0.2'
+VERSION=: '1.0.3'
 
-RELEASE=: 'j806'
+RELEASE=: 'j806 j807'
 
 DEPENDS=: 0 : 0
 api/gles
