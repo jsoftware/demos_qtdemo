@@ -8,7 +8,9 @@ simple demos for qt
 
 VERSION=: '1.0.3'
 
-RELEASE=: 'j806 j807'
+RELEASE=: 'j806'
+
+FOLDER=: 'demos/qtdemo'
 
 DEPENDS=: 0 : 0
 api/gles
