@@ -1,4 +1,4 @@
-NB. script built in ~Public/demos/wd/isigrid
+NB. script built in ~Addons/demos/wd/isigrid
 
 NB. cube
 
