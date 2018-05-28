@@ -6,7 +6,7 @@ DESCRIPTION=: 0 : 0
 simple demos for qt
 )
 
-VERSION=: '1.0.4'
+VERSION=: '1.0.5'
 
 RELEASE=: 'j807'
 
@@ -50,6 +50,7 @@ parse.ijs
 penstyles.ijs
 plotc.ijs
 plot.ijs
+pmoves.ijs
 printer.ijs
 progressbar.ijs
 pstyles.ijs
