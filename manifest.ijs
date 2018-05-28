@@ -6,9 +6,9 @@ DESCRIPTION=: 0 : 0
 simple demos for qt
 )
 
-VERSION=: '1.0.3'
+VERSION=: '1.0.4'
 
-RELEASE=: 'j806'
+RELEASE=: 'j807'
 
 FOLDER=: 'demos/qtdemo'
 

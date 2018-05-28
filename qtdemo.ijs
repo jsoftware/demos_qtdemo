@@ -50,6 +50,7 @@ multimedia dmultimedia
 pen_styles dpenstyles
 plot dplot
 plotc dplotc
+pmoves dpmoves
 printer dprinter
 progressbar dprogressbar
 scrollarea dscrollarea
@@ -144,6 +145,7 @@ dmultimedia=: 'multimedia' rundemo`notsupport@.((qtmajor=4)+.qtslim)
 dpenstyles=: 'penstyles' rundemo
 dplot=: 'plot' rundemo
 dplotc=: 'plotc' rundemo
+dpmoves=: 'pmoves' rundemo
 dprinter=: 'printer' rundemo
 dprogressbar=: 'progressbar' rundemo
 dpstyles=: 'pstyles' rundemo
