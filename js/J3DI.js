@@ -47,7 +47,7 @@ function initWebGL(canvasName, vshader, fshader, attribs, clearColor, clearDepth
     var canvas = document.getElementById(canvasName);
     var gl = canvas.getContext("experimental-webgl");
     if (!gl) {
-        alert("No WebGL context found");
+        alert("Your machine does not support WebGL in Jqt. Please check that the latest video drivers are installed.");
         return null;
     }
 
