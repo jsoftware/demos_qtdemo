@@ -7,6 +7,7 @@ sububar=: I. @(e.&'_')@]}
 maketitle=: ' '&sububar each @ cutopen ;._2
 fexist=: (1:@(1!:4) :: 0:) @ (fboxname &>) @ boxopen
 
+qtversion=: 100 #. 0&". ;. _1 '.', ({.~i.&'/') wd'version'
 qtmajor=: 0 ". ({.~ i.&'.') '/fs' -.~ (}.~ i.&'/') wd 'version'
 qtslim=: 's' e. wd 'version'
 qtfat=: 'f' e. wd 'version'
@@ -31,6 +32,7 @@ browser dbrowser
 controls dcontrols
 datetime ddatetime
 dial ddial
+drag_and_drop ddragndrop
 edit dedit
 edith dedith
 editm deditm
@@ -65,6 +67,7 @@ table dtable
 table2 dtable2
 table3 dtable3
 tabs dtabs
+theme dtheme
 timer dtimer
 toolbar dtoolbar
 toolbarv dtoolbarv
@@ -125,6 +128,7 @@ NB. =========================================================
 dbrowser=: 'browser' rundemo
 dcontrols=: 'controls' rundemo
 ddatetime=: 'datetime' rundemo
+ddragndrop=: 'dragndrop' rundemo`notsupport@.(qtversion<10703)
 ddial=: 'dial' rundemo
 dedit=: 'edit' rundemo
 dedith=: 'edith' rundemo
@@ -164,6 +168,7 @@ dtable=: 'table' rundemo
 dtable2=: 'table2' rundemo
 dtable3=: 'table3' rundemo
 dtabs=: 'tabs' rundemo
+dtheme=: 'theme' rundemo`notsupport@.(qtversion<10707)
 dtimer=: 'timer' rundemo
 dtoolbar=: 'toolbar' rundemo
 dtoolbarv=: 'toolbarv' rundemo
