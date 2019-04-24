@@ -6,7 +6,7 @@ DESCRIPTION=: 0 : 0
 simple demos for qt
 )
 
-VERSION=: '1.0.11'
+VERSION=: '1.0.12'
 
 RELEASE=: 'j901'
 
@@ -26,6 +26,7 @@ browser.ijs
 controls.ijs
 datetime.ijs
 dial.ijs
+dragndrop.ijs
 dspinbox.ijs
 edith.ijs
 edit.ijs
@@ -72,6 +73,7 @@ table3.ijs
 table4.ijs
 table.ijs
 tabs.ijs
+theme.ijs
 timer.ijs
 toolbar.ijs
 toolbarv.ijs
