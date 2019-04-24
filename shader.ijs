@@ -32,11 +32,11 @@ wd 'pshow'
 )
 
 a_g_initialize=: 3 : 0
-if. p=. glGetString GL_VERSION do. smoutput 'GL_VERSION: ', memr 0 _1 2,~ p end.
+if. p=. >@{. glGetString GL_VERSION do. smoutput 'GL_VERSION: ', memr 0 _1 2,~ p end.
 if. 0=p do. smoutput 'cannot retrieve GL_VERSION' return. end.
-if. p=. glGetString GL_VENDOR do. smoutput 'GL_VENDOR: ', memr 0 _1 2,~ p end.
-if. p=. glGetString GL_RENDERER do. smoutput 'GL_RENDERER: ', memr 0 _1 2,~ p end.
-if. p=. glGetString GL_SHADING_LANGUAGE_VERSION do. smoutput 'GL_SHADING_LANGUAGE_VERSION: ', memr 0 _1 2,~ p end.
+if. p=. >@{. glGetString GL_VENDOR do. smoutput 'GL_VENDOR: ', memr 0 _1 2,~ p end.
+if. p=. >@{. glGetString GL_RENDERER do. smoutput 'GL_RENDERER: ', memr 0 _1 2,~ p end.
+if. p=. >@{. glGetString GL_SHADING_LANGUAGE_VERSION do. smoutput 'GL_SHADING_LANGUAGE_VERSION: ', memr 0 _1 2,~ p end.
 GLSL=: wglGLSL''
 
 wglPROC''
@@ -62,11 +62,11 @@ smoutput fsrc
 'err program'=. gl_makeprogram vsrc;fsrc
 if. #err do. smoutput err return. end.
 
-vertexAttr=: glGetAttribLocation program;'vertex'
+vertexAttr=: >@{. glGetAttribLocation program;'vertex'
 assert. _1~: vertexAttr
-colorAttr=: glGetAttribLocation program;'color'
+colorAttr=: >@{. glGetAttribLocation program;'color'
 assert. _1~: colorAttr
-mvpUni=: glGetUniformLocation program;'mvp'
+mvpUni=: >@{. glGetUniformLocation program;'mvp'
 assert. _1~: mvpUni
 
 glGenBuffers 2;vbo=: 2#_1
