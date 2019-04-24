@@ -14,7 +14,7 @@ F0=: file2url jpath '~addons/demos/qtdemo/data/data.tsv'
 NB. =========================================================
 svgview=: 3 : 0
 's t'=. y
-wd 'pc svgview;cc w webview'
+wd 'pc svgview;cc w webview;set _ sizepolicy expanding'
 h=. '<!DOCTYPE html><html><head><meta charset="utf-8"/>',LF
 h=. h,'<script type="text/javascript" src="',D3,'" charset="utf-8"></script>',LF
 h=. h,'<style>',s,'</style>',LF
