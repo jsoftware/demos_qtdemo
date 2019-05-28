@@ -38,6 +38,7 @@ edith dedith
 editm deditm
 form_styles dpstyles
 gl2 dgl2
+glc dglc
 grid_layout dgrid
 ide dide
 image dimage
@@ -50,6 +51,7 @@ msgs dmsgs
 multimedia dmultimedia
 pen_styles dpenstyles
 plot dplot
+plotc dplotc
 pmoves dpmoves
 printer dprinter
 progressbar dprogressbar
@@ -132,6 +134,7 @@ dedit=: 'edit' rundemo
 dedith=: 'edith' rundemo
 deditm=: 'editm' rundemo
 dgl2=: 'gl2' rundemo
+dglc=: 'glc' rundemo
 dgrid=: 'grid' rundemo
 dide=: 'ide' rundemo
 dimage=: 'image' rundemo
@@ -145,6 +148,7 @@ dmsgs=: 'msgs' rundemo
 dmultimedia=: 'multimedia' rundemo`notsupport@.((qtmajor=4)+.qtslim)
 dpenstyles=: 'penstyles' rundemo
 dplot=: 'plot' rundemo
+dplotc=: 'plotc' rundemo
 dpmoves=: 'pmoves' rundemo
 dprinter=: 'printer' rundemo
 dprogressbar=: 'progressbar' rundemo
