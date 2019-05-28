@@ -6,9 +6,9 @@ DESCRIPTION=: 0 : 0
 simple demos for qt
 )
 
-VERSION=: '1.0.14'
+VERSION=: '1.0.15'
 
-RELEASE=: 'j807 j807'
+RELEASE=: 'j901'
 
 FOLDER=: 'demos/qtdemo'
 
@@ -32,7 +32,6 @@ edith.ijs
 edit.ijs
 editm.ijs
 gl2.ijs
-glc.ijs
 grid.ijs
 ide.ijs
 image.ijs
@@ -49,7 +48,6 @@ multimedia.ijs
 name.ijs
 parse.ijs
 penstyles.ijs
-plotc.ijs
 plot.ijs
 pmoves.ijs
 printer.ijs
