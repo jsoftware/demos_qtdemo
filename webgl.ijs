@@ -4,7 +4,7 @@ coclass 'qtdemo'
 
 J3DI=: file2url jpath '~addons/demos/qtdemo/js/J3DI.js'
 J3DIMath=: file2url jpath '~addons/demos/qtdemo/js/J3DIMath.js'
-PICTURE=: file2url jpath '~addons/graphics/bmp/toucan.bmp'
+PICTURE=: file2url jpath '~addons/demos/qtdemo/image/lena.png'
 
 NB. =========================================================
 run_webgl=: 3 : 0
