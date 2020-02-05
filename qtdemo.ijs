@@ -7,12 +7,13 @@ sububar=: I. @(e.&'_')@]}
 maketitle=: ' '&sububar each @ cutopen ;._2
 fexist=: (1:@(1!:4) :: 0:) @ (fboxname &>) @ boxopen
 
-qtversion=: 100 #. 0&". ;. _1 '.', ({.~i.&'/') wd'version'
-qtmajor=: 0 ". ({.~ i.&'.') '/fs' -.~ (}.~ i.&'/') wd 'version'
-qtslim=: 's' e. wd 'version'
-qtfat=: 'f' e. wd 'version'
+ver=: ({.~i.&'(') wd 'version'
+qtversion=: 100 #. 0&". ;. _1 '.', ({.~i.&'/') ver
+qtmajor=: 0 ". ({.~ i.&'.') '/fs' -.~ (}.~ i.&'/') ver
+qtslim=: 's' e. ver
+qtfat=: 'f' e. ver
 NB. pre 1.5.1
-qtfat=: (qtfat,-.qtslim){~10500>(3#100)#. ".;._1 '.', '/fs' -.~ (}.~ i.&'/') wd 'version'
+qtfat=: (qtfat,-.qtslim){~10500>(3#100)#. ".;._1 '.', '/fs' -.~ (}.~ i.&'/') ver
 
 rundemo=: 1 : 0
 load bind ('~addons/demos/qtdemo/','.ijs',~m)
