@@ -145,7 +145,7 @@ gl_clear ''
 gl_rgb 255 255 255
 gl_textcolor ''
 gl_textxy 10 30
-gl_text 'keys: x y z a s l r F10'
+gl_text 'keys: x y z a s l r F4'
 gl_textxy 10 50
 gl_text 'scale: ',":STEPS%100
 gl_textxy 10 70
@@ -159,7 +159,7 @@ for_i. i.4 do.
 end.
 )
 
-a_f10_fkey=: 3 : 0
+a_f4_fkey=: 3 : 0
 STOP=: -.STOP
 )
 
