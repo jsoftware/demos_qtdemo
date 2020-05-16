@@ -54,8 +54,8 @@ else.
 end.
 vsrc=. '#version ',(":GLSL),((GLSL>:300)#(*GLES_VERSION){::' core';' es'),LF,vsrc
 fsrc=. '#version ',(":GLSL),((GLSL>:300)#(*GLES_VERSION){::' core';' es'),LF,fsrc
-if.(GLSL>:300)*.0~:GLES_VERSION_jgles_ do.
-  fsrc=. ('void main';'out vec4 gl_FragColor;',LF,'void main') stringreplace fsrc
+if.(GLSL>:330)+.(GLSL>:300)*.0~:GLES_VERSION_jgles_ do.
+  fsrc=. ('void main';('out vec4 fragColor;',LF,'void main');'gl_FragColor';'fragColor') stringreplace fsrc
 end.
 smoutput vsrc
 smoutput fsrc
