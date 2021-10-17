@@ -21,7 +21,7 @@ groupboxend;
 
 bin zv;
 
-groupbox Expense Type;
+groupbox "Expense Type";
 cc gross radiobutton;
 cc net radiobutton group;
 cc paid checkbox;
