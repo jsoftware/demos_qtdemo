@@ -21,7 +21,7 @@ if. 0= #p do.
   EMPTY return.
 end.
 smoutput 'printer: ', p
-smoutput 'dpi: ', ":dpi=: glzresolution 300
+smoutput 'dpi: ', ":dpi=: glzqresolution '' [ glzresolution 300
 smoutput 'wh(inch):', ":glzqwh QPrinter_Inch
 smoutput 'wh(pixel):', ":<.glzqwh QPrinter_DevicePixel
 if. '_'={.p do.
