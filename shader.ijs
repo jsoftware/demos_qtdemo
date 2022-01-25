@@ -25,7 +25,7 @@ R=: 20 30 0
 EYE=: 0 0 1
 LR=: UD=: IO=: 0
 UP=: 0 1 0
-wd A
+wd rplc&(' opengl ';' opengl version 4.1 ')^:('Darwin'-:UNAME) A
 HD=: ".wd'qhwndc g'
 wd 'ptimer 100'
 wd 'pshow'
@@ -61,6 +61,11 @@ smoutput vsrc
 smoutput fsrc
 'err program'=. gl_makeprogram vsrc;fsrc
 if. #err do. smoutput err return. end.
+
+if. GLSL>120 do.
+  vao=: >@{:glGenVertexArrays 1;1#_1
+  glBindVertexArray {.vao
+end.
 
 vertexAttr=: >@{. glGetAttribLocation program;'vertex'
 assert. _1~: vertexAttr
@@ -124,12 +129,16 @@ mvp=: mvp mp gl_Perspective 30, (%/wh),1 10
 NB. note GL_FALSE, no transpose
 glUniformMatrix4fv mvpUni; 1; GL_FALSE; mvp
 
-glBindBuffer GL_ARRAY_BUFFER; {.vbo
+if. GLSL>120 do.
+  glBindVertexArray {.vao
+end.
+
 glEnableVertexAttribArray vertexAttr
+glBindBuffer GL_ARRAY_BUFFER; {.vbo
 glVertexAttribPointer vertexAttr; 3; GL_FLOAT; 0; 0; 0
 
-glBindBuffer GL_ARRAY_BUFFER; {:vbo
 glEnableVertexAttribArray colorAttr
+glBindBuffer GL_ARRAY_BUFFER; {:vbo
 glVertexAttribPointer colorAttr; 3; GL_FLOAT; 0; 0; 0
 
 glDrawArrays GL_TRIANGLES; 0; 36
