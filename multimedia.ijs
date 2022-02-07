@@ -68,8 +68,8 @@ wd 'set mm position ',":pos
 
 NB. =========================================================
 multimedia_bri_changed=: 3 : 0
-NB. available since Qt 5.4
-if. -. UNAME-:'Linux' do.
+NB. available since Qt 5.4 but unavailable in Qt6.2
+if. (qtmajor<6) do.
   wd 'set mm brightness ',wd'get bri value'
 end.
 )
@@ -87,7 +87,9 @@ if. #mmfile do.
   wd 'set mm stop'
   wd 'set play icon qstyle::sp_mediapause'
   wd 'set pos value 0'
-  wd 'set mm brightness ', wd 'get bri value'
+  if. (qtmajor<6) do.
+    wd 'set mm brightness ', wd 'get bri value'
+  end.
   wd 'set mm volume ', wd 'get vol value'
   wd 'set mm position 0'
   wd 'set mm media ', dquote mmfile
@@ -102,7 +104,9 @@ if. #mmfile do.
   wd 'set mm stop'
   wd 'set play icon qstyle::sp_mediapause'
   wd 'set pos value 0'
-  wd 'set mm brightness ', wd 'get bri value'
+  if. (qtmajor<6) do.
+    wd 'set mm brightness ', wd 'get bri value'
+  end.
   wd 'set mm volume ', wd 'get vol value'
   wd 'set mm position 0'
   wd 'set mm media ', dquote mmfile
@@ -130,7 +134,9 @@ NB. =========================================================
 MMdemo_run=: 3 : 0
 wd MULTIMEDIA
 wd 'set url text "https://archive.org/download/test-mpeg/test-mpeg_512kb.mp4"'
-wd 'set bri max 100;set _ min _100;set _ value 0'
+if. (qtmajor<6) do.
+  wd 'set bri max 100;set _ min _100;set _ value 0'
+end.
 wd 'set vol max 100;set _ min 0;set _ value 50'
 wd 'pshow'
 )
