@@ -84,6 +84,9 @@ quite finished my tea when I was sent for.'
 NB. =========================================================
 editmdemo_run=: 3 : 0
 wd 'pc editmdemo;pn "Editm Demo"'
+wd 'menupop "&File";'
+wd 'menu quit "&Quit" "Ctrl+Q" "" "";'
+wd 'menupopz;'
 wd 'cc ted editm'
 wd 'set ted stylesheet *color:#00007f;background-color:#ffefd5'
 wd 'set ted text *',Text
@@ -96,6 +99,7 @@ NB. call these after the pshow:
 wd 'set ted select 1580 1763'
 wd 'set ted scroll 15'
 )
+editmdemo_quit_button=: editmdemo_close
 
 NB. print editm to default printer:
 NB. wd 'cmd ted print'

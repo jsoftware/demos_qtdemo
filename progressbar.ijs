@@ -9,8 +9,12 @@ coclass 'qtdemo'
 NB. =========================================================
 PBdemo=: 0 : 0
 pc pbdemo closeok escclose;
+menupop "&File";
+menu quit "&Quit" "Ctrl+Q" "" "";
+menupopz;
 cc prog progressbar 0 20 7;
 )
+pbdemo_quit_button=: wd bind 'pclose'
 
 NB. =========================================================
 pbdemo_run=: 3 : 0

@@ -21,6 +21,9 @@ coclass 'qtdemo'
 NB. =========================================================
 SBdemo=: 0 : 0
 pc sbdemo closeok escclose;
+menupop "&File";
+menu quit "&Quit" "Ctrl+Q" "" "";
+menupopz;
 cc list listbox;
 set list items one two three;
 set list select 1;
@@ -29,6 +32,7 @@ set sbar addlabel row;
 set sbar addlabel col;
 set sbar addlabelp name;
 )
+sbdemo_quit_button=: wd bind 'pclose'
 
 NB. =========================================================
 sbdemo_run=: 3 : 0

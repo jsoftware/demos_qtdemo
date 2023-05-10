@@ -6,10 +6,14 @@ coclass 'qtdemo'
 NB. =========================================================
 Idemo=: 0 : 0
 pc idemo ptop;
+menupop "&File";
+menu quit "&Quit" "Ctrl+Q" "" "";
+menupopz;
 cc show button;cn "Toggle show/hide the J Qt Ide";
 cc closeonly button;cn "Close dialog, no change to Ide state";
 cc closeshow button;cn "Close dialog and show Ide";
 )
+idemo_quit_button=: idemo_close
 
 NB. =========================================================
 idemo_run=: 3 : 0

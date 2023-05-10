@@ -11,6 +11,9 @@ coclass 'qtdemo'
 NB. =========================================================
 browser=: 3 : 0
 wd 'pc browser'
+wd 'menupop "&File";'
+wd 'menu quit "&Quit" "Ctrl+Q" "" "";'
+wd 'menupopz;'
 wd 'bin v'
 wd 'bin h'
 wd 'cc backward1 button;cn "<<"'
@@ -40,6 +43,7 @@ if. fexists jpath '~addons/docs/help/index.htm' do.
 end.
 wd 'pshow'
 )
+browser_quit_button=: browser_close
 
 NB. =========================================================
 browser_forward1_button=: 3 : 0

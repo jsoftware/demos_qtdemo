@@ -30,6 +30,9 @@ wsserver1=: wsserver2=: ''
 NB. =========================================================
 websocketclient=: 3 : 0
 wd 'pc websocketclient'
+wd 'menupop "&File";'
+wd 'menu quit "&Quit" "Ctrl+Q" "" "";'
+wd 'menupopz;'
 wd 'bin v'
 wd 'groupbox "Echo Server"'
 wd 'bin vh'
@@ -64,6 +67,7 @@ wd 'set e1 text *hello world'
 wd 'set ipaddr2 text ws://localhost:3000'
 wd 'set e2 text *i.4 5'
 )
+websocketclient_quit_button=: websocketclient_close
 
 NB. =========================================================
 websocketclient_connect1_button=: 3 : 0

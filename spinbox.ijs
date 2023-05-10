@@ -22,9 +22,13 @@ coclass 'qtdemo'
 NB. =========================================================
 SPdemo=: 0 : 0
 pc spinboxdemo;
+menupop "&File";
+menu quit "&Quit" "Ctrl+Q" "" "";
+menupopz;
 cc int spinbox _20 1 20 7;
 cc double dspinbox 2 _200 10.5 200 7;
 )
+spinboxdemo_quit_button=: spinboxdemo_close
 
 NB. =========================================================
 spinboxdemo_close=: 3 : 0

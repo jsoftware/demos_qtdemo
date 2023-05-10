@@ -6,6 +6,9 @@ NB. =========================================================
 imdemo_run=: 3 : 0
 if. -. checkrequire 'bmp';'graphics/bmp' do. return. end.
 wd 'pc imdemo closeok escclose'
+wd 'menupop "&File";'
+wd 'menu quit "&Quit" "Ctrl+Q" "" "";'
+wd 'menupopz;'
 wd 'grid shape 2'
 wd 'cc pic image'
 wd 'cc jpg image transparent'
@@ -27,5 +30,6 @@ d2 writeimg_jqtide_ jpath '~temp/blue.bmp'
 wd 'set bmp image *',jpath '~temp/blue.bmp'
 wd 'pshow'
 )
+imdemo_quit_button=: wd bind 'pclose'
 
 imdemo_run''

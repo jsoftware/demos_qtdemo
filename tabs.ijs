@@ -18,7 +18,10 @@ coclass 'qtdemo'
 
 NB. =========================================================
 Tabdemo=: 0 : 0
-pc tabdemo closeok escclose;
+pc tabdemo escclose;
+menupop "&File";
+menu quit "&Quit" "Ctrl+Q" "" "";
+menupopz;
 cc prefs tab closable movable;
 
 tabnew View;
@@ -56,6 +59,7 @@ set entry text 盛大 abc 大嘴鳥;
 set list items one "two turtle doves" three "four colly birds" five six seven;
 
 )
+tabdemo_quit_button=: tabdemo_close
 
 NB. =========================================================
 tabdemo_run=: 3 : 0

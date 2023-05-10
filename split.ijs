@@ -14,7 +14,10 @@ coclass 'qtdemo'
 
 NB. =========================================================
 Splitter=: 0 : 0
-pc splitter closeok escclose;
+pc splitter escclose;
+menupop "&File";
+menu quit "&Quit" "Ctrl+Q" "" "";
+menupopz;
 splith 0 1 100 200;
 cc ed1 editm;
 splitsep;
@@ -29,6 +32,7 @@ splitend;
 splitend;
 splitend;
 )
+splitter_quit_button=: splitter_close
 
 NB. =========================================================
 splitter_run=: 3 : 0

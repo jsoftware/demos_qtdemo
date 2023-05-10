@@ -8,9 +8,13 @@ STOP=: 1
 
 A=: 0 : 0
 pc a;
+menupop "&File";
+menu quit "&Quit" "Ctrl+Q" "" "";
+menupopz;
 minwh 300 300;cc g opengl flush;
 rem form end;
 )
+a_quit_button=: a_close
 
 a_run=: 3 : 0
 if. -. checkrequire_qtdemo_ 'gles';'api/gles' do. return. end.

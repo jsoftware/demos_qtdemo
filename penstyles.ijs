@@ -17,8 +17,10 @@ NB. =========================================================
 penstyle_run=: 3 : 0
 require 'gl2'
 coinsert 'jgl2'
-wd 'pc penstyle escclose closeok'
-wd 'pn Pen Styles'
+wd 'pc penstyle escclose closeok;pn Pen Styles'
+wd 'menupop "&File";'
+wd 'menu quit "&Quit" "Ctrl+Q" "" "";'
+wd 'menupopz;'
 wd 'minwh 400 270'
 wd 'cc g isidraw flush'
 wd 'pshow'
@@ -34,5 +36,6 @@ for_i. i.#PenStyles do.
 end.
 glpaint''
 )
+penstyle_quit_button=: wd bind 'pclose'
 
 penstyle_run''

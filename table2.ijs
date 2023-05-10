@@ -14,7 +14,7 @@ DEL=: 127{a.
 Types=: 0 100 200 0 0 300 0
 NB. =========================================================
 makedata=: 3 : 0
-a=.  'Ford 0 ',DEL,'"First Item" "Second Item" "Third Item"',DEL,' 11 8 "0 Sedan Coupe Convertible" "USA"'
+a=. 'Ford 0 ',DEL,'"First Item" "Second Item" "Third Item"',DEL,' 11 8 "0 Sedan Coupe Convertible" "USA"'
 a=. a,'Toyota 0 "" 6 9 "1 Sedan Coupe Convertible" "Japan"'
 a=. a,'"Mercedes Benz" 1 "1 First Second Third" 23 6 "2 Sedan Coupe Convertible" "Germany"'
 )
@@ -22,6 +22,9 @@ a=. a,'"Mercedes Benz" 1 "1 First Second Third" 23 6 "2 Sedan Coupe Convertible"
 NB. =========================================================
 table=: 3 : 0
 wd 'pc table'
+wd 'menupop "&File";'
+wd 'menu quit "&Quit" "Ctrl+Q" "" "";'
+wd 'menupopz;'
 wd 'cc pac table 3 7 selectrows sortable'
 wd 'set pac hdr Manufacturer Select Options Hire Lease Type Origin'
 wd 'set pac hdralign 0 1 1 1 1 1 0'
@@ -33,6 +36,7 @@ wd 'set pac cell 1 2 *3 First Second Third Fourth'
 wd 'pmove 100 10 500 200'
 wd 'pshow'
 )
+table_quit_button=: table_close
 
 NB. =========================================================
 table_pac_change=: 3 : 0

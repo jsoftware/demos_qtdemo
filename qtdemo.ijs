@@ -80,7 +80,10 @@ webview dwebview
 
 NB. =========================================================
 QTDEMO=: 0 : 0
-pc qtdemo closeok;pn "Demos Select";
+pc qtdemo;pn "Demos Select";
+menupop "&File";
+menu quit "&Quit" "Ctrl+Q" "" "";
+menupopz;
 bin v;
 cc static1 static;cn "static1";
 bin h;
@@ -94,6 +97,7 @@ cc addons button;cn "Install addons";
 bin zzz;
 rem form end;
 )
+qtdemo_quit_button=: qtdemo_close
 
 NB. =========================================================
 qtdemo_run=: 3 : 0

@@ -12,6 +12,9 @@ coclass 'qtdemo'
 NB. =========================================================
 quickwidget=: 3 : 0
 wd 'pc quickwidget'
+wd 'menupop "&File";'
+wd 'menu quit "&Quit" "Ctrl+Q" "" "";'
+wd 'menupopz;'
 wd 'cc e edit'
 wd 'bin h'
 wd 'cc run button;cn "run"'
@@ -22,6 +25,7 @@ wd 'cc q quickwidget'
 wd 'set e text *', e=. jpath '~addons/demos/qtdemo/quick2.qml'
 wd 'pshow'
 )
+quickwidget_quit_button=: quickwidget_close
 
 NB. =========================================================
 quickwidget_e_button=: 3 : 0

@@ -9,8 +9,8 @@ coclass 'qtdemo'
 towords=: ;: inverse
 
 NB. =========================================================
-Rws=:100
-Cls=:1000
+Rws=: 100
+Cls=: 1000
 Tab=: 10000+?(Rws,Cls)$90000
 Tab=: <.(10?10000000) (<3;(Cls%10)*i.10)} Tab
 Hdr=: (<'Hdr')(,":) each i.Cls
@@ -19,6 +19,9 @@ Lab=: (<'Lab')(,":) each i.Rws
 NB. =========================================================
 table=: 3 : 0
 wd 'pc table'
+wd 'menupop "&File";'
+wd 'menu quit "&Quit" "Ctrl+Q" "" "";'
+wd 'menupopz;'
 wd 'cc pac table ',":Rws,Cls
 wd 'set pac hdr ',towords Hdr
 wd 'set pac hdralign 1'
@@ -29,6 +32,7 @@ wd 'set pac data *',towords , 'c'8!:0 Tab
 wd 'pmove 100 10 500 200'
 wd 'pshow'
 )
+table_quit_button=: table_close
 
 NB. =========================================================
 table_close=: 3 : 0

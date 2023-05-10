@@ -22,8 +22,12 @@ coclass 'qtdemo'
 NB. =========================================================
 SLdemo=: 0 : 0
 pc sliderdemo;
+menupop "&File";
+menu quit "&Quit" "Ctrl+Q" "" "";
+menupopz;
 cc track slider 2 0 1 5 20 7;
 )
+sliderdemo_quit_button=: sliderdemo_close
 
 NB. =========================================================
 sliderdemo_close=: 3 : 0

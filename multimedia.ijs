@@ -6,6 +6,9 @@ coclass 'qtdemo'
 NB. =========================================================
 MULTIMEDIA=: 0 : 0
 pc multimedia;
+menupop "&File";
+menu quit "&Quit" "Ctrl+Q" "" "";
+menupopz;
 bin v;
 minwh 150 150;
 cc mm multimedia video;
@@ -26,6 +29,7 @@ bin z;
 bin z;
 pshow;
 )
+multimedia_quit_button=: multimedia_close
 
 NB. =========================================================
 multimedia_mm_duration=: 3 : 0

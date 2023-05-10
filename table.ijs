@@ -70,6 +70,9 @@ dat=. ((<&>Sel),<''),.t,.;:'USA Japan Germany All'
 NB. =========================================================
 table=: 3 : 0
 wd 'pc table'
+wd 'menupop "&File";'
+wd 'menu quit "&Quit" "Ctrl+Q" "" "";'
+wd 'menupopz;'
 wd 'cc pac table 4 5'
 wd 'set pac hdr Select Hire Lease Total Origin'
 wd 'set pac hdralign 1 1 1 1 0'
@@ -81,6 +84,7 @@ wd 'set pac data *',makedata''
 wd 'pmove 100 10 500 200'
 wd 'pshow'
 )
+table_quit_button=: table_close
 
 NB. =========================================================
 table_pac_change=: 3 : 0

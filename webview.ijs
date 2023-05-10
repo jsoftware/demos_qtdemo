@@ -13,6 +13,9 @@ coclass 'qtdemo'
 NB. =========================================================
 webview=: 3 : 0
 wd 'pc webview'
+wd 'menupop "&File";'
+wd 'menu quit "&Quit" "Ctrl+Q" "" "";'
+wd 'menupopz;'
 wd 'cc e edit'
 wd 'splitv 1 1 250 250'
 wd 'cc w1 webview'
@@ -25,6 +28,7 @@ wd 'set w2 baseurl *http://www.jsoftware.com'
 wd 'set w2 html *<html><body><img src=''./zippy.gif'' /></body></html>'
 wd 'pshow'
 )
+webview_quit_button=: webview_close
 
 NB. =========================================================
 webview_e_button=: 3 : 0

@@ -6,11 +6,15 @@ coclass 'qtdemo'
 NB. =========================================================
 msgs=: 3 : 0
 wd 'pc msgs'
+wd 'menupop "&File";'
+wd 'menu quit "&Quit" "Ctrl+Q" "" "";'
+wd 'menupopz;'
 wd 'cc ms checkbox;cn "smoutput immediately";'
 wd 'cc bu button;cn start;'
 wd 'cc prog progressbar 0 10 10'
 wd 'pshow'
 )
+msgs_quit_button=: msgs_close
 
 NB. =========================================================
 msgs_bu_button=: 3 : 0

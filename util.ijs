@@ -3,7 +3,11 @@ NB. util.ijs
 wd 'notacommand'  NB. error
 wd 'qer'
 
-wd 'pc abc'
+wd 'pc abc close'
+wd 'menupop "&File";'
+wd 'menu quit "&Quit" "Ctrl+Q" "" "";'
+wd 'menupopz;'
+abc_quit_button=: wd bind 'pclose'
 [abc=: wd 'qhwndp'
 wd 'pc def'
 [def=: wd 'qhwndp'

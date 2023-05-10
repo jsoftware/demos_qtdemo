@@ -23,6 +23,9 @@ sademo=: 3 : 0
 require 'gl2'
 coinsert 'jgl2'
 wd 'pc sademo'
+wd 'menupop "&File";'
+wd 'menu quit "&Quit" "Ctrl+Q" "" "";'
+wd 'menupopz;'
 wd 'cc g isigraph flush'
 wd 'cc sa scrollarea'
 wd 'set g minwh 400 250'
@@ -31,6 +34,7 @@ wd 'pshow'
 smoutput 'Try:',LF,'  wd ''set sa pos 10 100'''
 showevents_jqtide_ 2
 )
+sademo_quit_button=: sademo_close
 
 NB. =========================================================
 sademo_close=: 3 : 0

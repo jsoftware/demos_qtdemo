@@ -16,8 +16,12 @@ coclass 'qtdemo'
 NB. =========================================================
 DSPdemo=: 0 : 0
 pc dspinboxdemo;
+menupop "&File";
+menu quit "&Quit" "Ctrl+Q" "" "";
+menupopz;
 cc track dspinbox _20 0.5 20 7.5;
 )
+dspinboxdemo_quit_button=: dspinboxdemo_close
 
 NB. =========================================================
 dspinboxdemo_close=: 3 : 0

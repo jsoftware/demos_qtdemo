@@ -12,6 +12,9 @@ a=. a,' 1 "1 First Second Third" "push me"'
 NB. =========================================================
 table=: 3 : 0
 wd 'pc table'
+wd 'menupop "&File";'
+wd 'menu quit "&Quit" "Ctrl+Q" "" "";'
+wd 'menupopz;'
 wd 'cc pac table 5 7'
 wd 'set pac hdr Manufacturer Select Options Hire Lease Type Origin'
 wd 'set pac hdralign 0 1 1 1 1 1 0'
@@ -57,6 +60,7 @@ wd 'set pac rowheight 40 60 60'
 wd 'pmove 100 10 800 300'
 wd 'pshow'
 )
+table_quit_button=: table_close
 
 NB. =========================================================
 table_pac_change=: 3 : 0

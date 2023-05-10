@@ -6,6 +6,9 @@ coclass 'qtdemo'
 NB. =========================================================
 grid=: 3 : 0
 wd 'pc grid;pn "Grid Layout"'
+wd 'menupop "&File";'
+wd 'menu quit "&Quit" "Ctrl+Q" "" "";'
+wd 'menupopz;'
 wd 'bin vhg'
 wd 'grid shape 2 3'
 wd 'grid colwidth 1 200'
@@ -33,6 +36,7 @@ wd 'bin z'
 wd 'pshow'
 wd 'set m text "3 0:4 1"'
 )
+grid_quit_button=: grid_close
 
 NB. =========================================================
 grid_close=: 3 : 0

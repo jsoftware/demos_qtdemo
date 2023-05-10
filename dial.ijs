@@ -17,8 +17,12 @@ coclass 'qtdemo'
 NB. =========================================================
 DLdemo=: 0 : 0
 pc dialdemo;
+menupop "&File";
+menu quit "&Quit" "Ctrl+Q" "" "";
+menupopz;
 cc track dial v 2 1 5 20 7;
 )
+dialdemo_quit_button=: dialdemo_close
 
 NB. =========================================================
 dialdemo_close=: 3 : 0

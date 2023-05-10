@@ -17,8 +17,12 @@ coclass 'qtdemo'
 NB. =========================================================
 SBdemo=: 0 : 0
 pc scrollbardemo;
+menupop "&File";
+menu quit "&Quit" "Ctrl+Q" "" "";
+menupopz;
 cc track scrollbar 2 1 5 20 7;
 )
+scrollbardemo_quit_button=: scrollbardemo_close
 
 NB. =========================================================
 scrollbardemo_close=: 3 : 0

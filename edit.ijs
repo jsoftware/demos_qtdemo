@@ -7,6 +7,9 @@ NB. =========================================================
 edit=: 3 : 0
 wd 'fontdef monospace 12'
 wd 'pc edit'
+wd 'menupop "&File";'
+wd 'menu quit "&Quit" "Ctrl+Q" "" "";'
+wd 'menupopz;'
 wh=. ". wd 'getp extent ',10#'M'
 wd 'bin v'
 wd 'bin g;grid size 3'
@@ -21,7 +24,7 @@ wd 'cc e1 edit left'
 wd 'cc e2 edit center'
 wd 'cc e3 edit right'
 if. 901<".3{.}.9!:14'' do.
-wd 'cc e6 edit uppercase'
+  wd 'cc e6 edit uppercase'
 end.
 wd 'bin z'
 wd 'bin g;grid size 2'
@@ -48,6 +51,7 @@ wd 'setp stylesheet *QLineEdit{color:blue} QLabel{color:green;background-color:y
 wd 'set e4 stylesheet color:red'
 wd 'set e5 stylesheet background-color:#bbbbbb'
 )
+edit_quit_button=: edit_close
 
 NB. =========================================================
 edit_e0_button=: 3 : 0

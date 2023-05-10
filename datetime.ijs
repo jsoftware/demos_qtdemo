@@ -60,9 +60,13 @@ coclass 'qtdemo'
 NB. =========================================================
 DTdemo=: 0 : 0
 pc datetimedemo;
+menupop "&File";
+menu quit "&Quit" "Ctrl+Q" "" "";
+menupopz;
 cc date dateedit;
 cc time timeedit;
 )
+datetimedemo_quit_button=: datetimedemo_close
 
 NB. =========================================================
 datetimedemo_close=: 3 : 0

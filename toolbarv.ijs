@@ -8,6 +8,9 @@ coclass 'qtdemo'
 NB. =========================================================
 TBdemo=: 0 : 0
 pc tbdemo;
+menupop "&File";
+menu quit "&Quit" "Ctrl+Q" "" "";
+menupopz;
 bin h;
 cc tools toolbar 32x32 vertical;
 bin v;
@@ -16,6 +19,7 @@ cc disable button;
 cc list listbox;
 set list items one two three;
 )
+tbdemo_quit_button=: tbdemo_close
 
 NB. =========================================================
 tbdemo_run=: 3 : 0

@@ -5,6 +5,9 @@ coclass 'qtdemo'
 NB. =========================================================
 DragnDrop=: 0 : 0
 pc dragndrop closeok escclose;pn "Select Active";
+menupop "&File";
+menu quit "&Quit" "Ctrl+Q" "" "";
+menupopz;
 bin v;
 cc l0 static;cn "Select items then drag and drop to move and rearrange. Double click will also move an item";
 bin g;
@@ -20,6 +23,7 @@ bin s1;
 cc ok button;
 cn "OK";
 )
+dragndrop_quit_button=: wd bind 'pclose'
 
 NB. =========================================================
 dragndrop=: 3 : 0

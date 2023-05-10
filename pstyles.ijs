@@ -28,6 +28,9 @@ Others are independent.
 NB. =========================================================
 PSdemo=: 0 : 0
 pc psdemo escclose nosize;
+menupop "&File";
+menu quit "&Quit" "Ctrl+Q" "" "";
+menupopz;
 pn "Form Styles";
 cc lab static;
 bin p12hv;
@@ -54,6 +57,7 @@ bin szv;
 cc ok button;cn "Create Form";
 bin sz;
 )
+psdemo_quit_button=: psdemo_close
 
 NB. =========================================================
 psdemo_run=: 3 : 0

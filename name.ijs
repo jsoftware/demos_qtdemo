@@ -1,7 +1,10 @@
 NAME=: 'Jemima Puddle Duck'
 
 EDITNAME=: 0 : 0
-pc editname;
+pc editname closeok;
+menupop "&File";
+menu quit "&Quit" "Ctrl+Q" "" "";
+menupopz;
 minwh 70 10;cc name edit;
 bin h;
 cc OK button;
@@ -9,6 +12,7 @@ cc Cancel button;
 bin zs;
 pas 6 6;pcenter;pshow;ptop;
 )
+editname_quit_button=: wd bind 'pclose'
 
 NB. this creates and initializes the form:
 editname=: 3 : 0

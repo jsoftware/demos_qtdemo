@@ -5,6 +5,9 @@ coclass 'qtdemo'
 NB. =========================================================
 svgdemo_run=: 3 : 0
 wd 'pc svgdemo closeok escclose'
+wd 'menupop "&File";'
+wd 'menu quit "&Quit" "Ctrl+Q" "" "";'
+wd 'menupopz;'
 wd 'bin v'
 wd 'cc s1 svgview zoom'  NB. show zoom control
 wd 'cc s2 svgview'
@@ -14,5 +17,6 @@ wd 'set s2 xml *',fread '~addons/demos/qtdemo/image/bubbles.svg'     NB. xml dat
 wd 'pmove 0 0 400 600'
 wd 'pshow'
 )
+svgdemo_quit_button=: wd bind 'pclose'
 
 svgdemo_run''

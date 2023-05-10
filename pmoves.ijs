@@ -12,7 +12,10 @@ The position and size are saved in ~config/winpos.dat.
 
 NB. =========================================================
 pmovesdemo_run=: 3 : 0
-wd 'pc pmovesdemo closeok escclose;pn "pmoves Demo"'
+wd 'pc pmovesdemo escclose;pn "pmoves Demo"'
+wd 'menupop "&File";'
+wd 'menu quit "&Quit" "Ctrl+Q" "" "";'
+wd 'menupopz;'
 wd 'cc ted editm'
 wd 'set ted stylesheet *color:#00007f;background-color:#ffefd5'
 wd 'set ted text *',Text
@@ -21,6 +24,7 @@ wd 'cc close button;cn Close'
 wd 'pmoves 100 10 500 200'
 wd 'pshow'
 )
+pmovesdemo_quit_button=: pmovesdemo_close
 
 NB. =========================================================
 pmovesdemo_close=: 3 : 0

@@ -14,7 +14,11 @@ F0=: file2url jpath '~addons/demos/qtdemo/data/data.tsv'
 NB. =========================================================
 svgview=: 3 : 0
 's t'=. y
-wd 'pc svgview;cc w webview;set _ sizepolicy expanding'
+wd 'pc svgview'
+wd 'menupop "&File";'
+wd 'menu quit "&Quit" "Ctrl+Q" "" "";'
+wd 'menupopz;'
+wd 'cc w webview;set _ sizepolicy expanding'
 wd 'pmove 50 200 1000 600'
 h=. '<!DOCTYPE html><html><head><meta charset="utf-8"/>',LF
 h=. h,'<script type="text/javascript" src="',D3,'" charset="utf-8"></script>',LF
@@ -25,6 +29,7 @@ wd 'pshow'
 wd 'set w baseurl *', file2url jpath '~addons'
 wd 'set w html *',m
 )
+svgview_quit_button=: svgview_close
 
 NB. =========================================================
 svgview_close=: 3 : 0

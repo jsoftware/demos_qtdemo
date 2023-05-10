@@ -16,9 +16,13 @@ EMPTY
 NB. =========================================================
 FORM=: 0 : 0
 pc demo closeok;pn "gl2 demo";
+menupop "&File";
+menu quit "&Quit" "Ctrl+Q" "" "";
+menupopz;
 minwh 450 350;
 cc gs isigraph flush;
 )
+demo_quit_button=: wd bind 'pclose'
 
 NB. =========================================================
 demo_gs_paint=: 3 : 0

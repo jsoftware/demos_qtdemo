@@ -31,6 +31,7 @@ wd 'set list items one two three'
 wd 'pmove 700 10 300 200'
 wd 'pshow'
 )
+test_quit_button=: test_close
 
 NB. =========================================================
 test_close=: 3 : 0

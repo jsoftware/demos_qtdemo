@@ -7,6 +7,9 @@ coclass 'qtdemo'
 
 Controls=: 0 : 0
 pc controls;
+menupop "&File";
+menu quit "&Quit" "Ctrl+Q" "" "";
+menupopz;
 rem make nested vertical, horizontal, vertical bins:;
 bin vhv;
 
@@ -45,6 +48,7 @@ cc ok button;cn "Push Me";
 cc cancel button default;cn "Cancel";
 set ok stretch 1;
 )
+controls_quit_button=: controls_close
 
 NB. =========================================================
 controls_run=: 3 : 0
