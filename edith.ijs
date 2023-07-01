@@ -108,8 +108,8 @@ cc ted edith flush;
 NB. =========================================================
 edithdemo_run=: 3 : 0
 wd EDITHDEMO
-if. UNAME -: 'Linux' do. fnt=: 'font: 12pt "DejaVu Serif"' else. fnt=: 'font: 12pt "Georgia";' end.
-if. UNAME -: 'Linux' do. fnte=: 'font: 12pt "DejaVu Mono"' else. fnte=: 'font: 12pt "Courier New";' end.
+if. (<UNAME)e.'Linux';'FreeBSD';'OpenBSD' do. fnt=: 'font: 12pt "DejaVu Serif"' else. fnt=: 'font: 12pt "Georgia";' end.
+if. (<UNAME)e.'Linux';'FreeBSD';'OpenBSD' do. fnte=: 'font: 12pt "DejaVu Mono"' else. fnte=: 'font: 12pt "Courier New";' end.
 wd 'set ted stylesheet *QTextEdit {color:#00007f;background-color:#ffffee;',fnt,'}'
 wd 'set ted text *',Text
 wd ::0: 'set ted baseurl *',jpath'~addons/demos/qtdemo/'
