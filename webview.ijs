@@ -26,6 +26,7 @@ wd 'set e text *http://news.yahoo.com'
 wd 'set w1 url *http://news.yahoo.com'
 wd 'set w2 baseurl *http://www.jsoftware.com'
 wd 'set w2 html *<html><body><img src=''./zippy.gif'' /></body></html>'
+wd 'pmove _1 _1 650 700'
 wd 'pshow'
 )
 webview_quit_button=: webview_close
