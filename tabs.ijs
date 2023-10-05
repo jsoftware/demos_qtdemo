@@ -69,9 +69,11 @@ wd 'set prefs active 1'
 wd 'set prefs label 2 Notes'
 wd 'set prefs tooltip 0 "toolip view"'
 wd 'set prefs tooltip 1 "toolip editor"'
-wd 'set prefs icon 0 qstyle::sp_fileicon'
-wd 'set prefs icon 1 qstyle::sp_diropenicon'
-wd 'set prefs icon 2 qstyle::sp_mediavolume'
+if. -. UNAME -: 'Darwin' do.
+  wd 'set prefs icon 0 qstyle::sp_fileicon'
+  wd 'set prefs icon 1 qstyle::sp_diropenicon'
+  wd 'set prefs icon 2 qstyle::sp_mediavolume'
+end.
 wd 'pmove 400 10 400 200'
 wd 'pshow'
 )
