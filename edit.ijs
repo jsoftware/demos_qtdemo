@@ -23,9 +23,7 @@ wd 'cc l3 static right'
 wd 'cc e1 edit left'
 wd 'cc e2 edit center'
 wd 'cc e3 edit right'
-if. 901<".3{.}.9!:14'' do.
-  wd 'cc e6 edit uppercase'
-end.
+wd 'cc e6 edit uppercase'
 wd 'bin z'
 wd 'bin g;grid size 2'
 wd 'bin h;cc l4 static;cn "integer 0 to 111";cc v1 edit right;set _ intvalidator 0 111;bin sz'
