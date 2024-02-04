@@ -96,6 +96,8 @@ end.
 NB. =========================================================
 getdata=: 3 : 0
 if. #data do. EMPTY return. end.
+smoutput wd'qscreen'
+smoutput 'w h ',":w,h
 data=: glqpixels 200 200 40 40
 smoutput 10{.data
 glpaint''

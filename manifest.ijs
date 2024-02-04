@@ -6,7 +6,7 @@ DESCRIPTION=: 0 : 0
 simple demos for qt
 )
 
-VERSION=: '1.0.31'
+VERSION=: '1.0.32'
 
 RELEASE=: 'j901'
 
