@@ -55,6 +55,26 @@ demo5=: 3 : 0
 wd 'mb query mb_yes =mb_no mb_cancel "Model Run" "OK to continue?"'
 )
 
+demo4_qmessagebox_yes=: 3 : 0
+smoutput 'demo4 yes'
+)
+
+demo4_qmessagebox_cancel=: 3 : 0
+smoutput 'demo4 cancel'
+)
+
+demo5_qmessagebox_yes=: 3 : 0
+smoutput 'demo5 yes'
+)
+
+demo5_qmessagebox_no=: 3 : 0
+smoutput 'demo5 no'
+)
+
+demo5_qmessagebox_cancel=: 3 : 0
+smoutput 'demo5 cancel'
+)
+
 demo1''
 demo2''
 demo3''
