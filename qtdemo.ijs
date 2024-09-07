@@ -1,6 +1,6 @@
 
 cocurrent <'base'
-18!:55 <'qtdemo'
+271828&(18!:55) ::(18!:55) ::0: <'qtdemo'
 coclass 'qtdemo'
 
 sububar=: I. @(e.&'_')@]}
