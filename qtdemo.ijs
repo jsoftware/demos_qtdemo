@@ -147,7 +147,7 @@ dmbox=: 'mbox' rundemo
 dmbdialog=: 'mbdialog' rundemo
 dmenu=: 'menu' rundemo
 dmsgs=: 'msgs' rundemo
-dmultimedia=: 'multimedia' rundemo`notsupport@.(qtmajor=4)
+dmultimedia=: 'multimedia' rundemo`notsupport@.((qtmajor=4)+.qtslim)
 dpenstyles=: 'penstyles' rundemo
 dplot=: 'plot' rundemo
 dpmoves=: 'pmoves' rundemo
